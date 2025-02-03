@@ -5,9 +5,9 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building...'
-                // Use triple quotes and the call operator (&) in PowerShell
+                // Using triple quotes and Windows-style path with double backslashes
                 powershell '''
-                    & "C:/Users/sarat/AppData/Local/Programs/Python/Python312/python.exe" "hello.py"
+                    & "C:\\Users\\sarat\\AppData\\Local\\Programs\\Python\\Python312\\python.exe" "hello.py"
                 '''
             }
         }
@@ -15,7 +15,6 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'Running tests...'
-                // Use Write-Output instead of echo for clarity
                 powershell 'Write-Output "Running Windows tests..."'
             }
         }
