@@ -5,21 +5,21 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building...'
-                sh 'python3 hello.py'
+                powershell 'python hello.py'
             }
         }
 
         stage('Test') {
             steps {
                 echo 'Running tests...'
-                // Here you can add commands to run tests
+                powershell 'echo "Running Windows tests..."'
             }
         }
 
         stage('Deploy') {
             steps {
                 echo 'Deploying...'
-                // Here you can add commands to deploy your app
+                powershell 'echo "Deploying on Windows..."'
             }
         }
     }
