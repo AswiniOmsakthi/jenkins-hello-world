@@ -5,7 +5,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building...'
-                powershell 'python hello.py'
+                powershell '"C:\Users\sarat\AppData\Local\Programs\Python\Python312\python.exe" hello.py'
             }
         }
 
